@@ -10,7 +10,11 @@
 
   <p>Enter a number:</p>
 
-  <input type="text" id="numberInput">
+  <input 
+    type="text" 
+    id="numberInput"
+    onkeydown = "if (event.key=== 'Enter') checkNumber() "
+  >
   <button onclick="checkNumber()">Search</button>
 
   <p id="result"></p>

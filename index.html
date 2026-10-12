@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Number Checker</title>
+</head>
+<body>
+
+  <h1>Number Checker</h1>
+
+  <p>Enter a number:</p>
+
+  <input type="text" id="numberInput">
+  <button onclick="checkNumber()">Search</button>
+
+  <p id="result"></p>
+
+  <script>
+    // Your saved numbers
+    const numbers = ["1234", "5678", "9012", "4321"];
+
+    function checkNumber() {
+      const input = document
+        .getElementById("numberInput")
+        .value.trim();
+
+      const result = document.getElementById("result");
+
+      if (numbers.includes(input)) {
+        result.textContent = "Number found!";
+      } else {
+        result.textContent = "Number not found!";
+      }
+    }
+  </script>
+
+</body>
+</html>
